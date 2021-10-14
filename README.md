@@ -8,7 +8,7 @@ This mod adds support to create an ovelary with all the skills in Hollow Knight 
 
 ## How to install
 
-Unzip the release .zip file in `HollowKnightPath/hollow_knight_Data/Managed/Mods` folder.
+Unzip the [last release](https://github.com/carloslancha/allskills-mod/releases/latest) .zip file in `HollowKnightPath/hollow_knight_Data/Managed/Mods` folder.
 
 ## How to integrate in OBS
 
