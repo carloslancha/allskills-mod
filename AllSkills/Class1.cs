@@ -95,6 +95,7 @@ namespace AllSkills
             string path = Directory.GetCurrentDirectory() + @"\hollow_knight_Data\Managed\Mods\AllSkills";
             string fileName = "data.html";
             string fullPath = path + "\\" + fileName;
+            string timeString = DateTime.Now.ToString("hh:mm:ss");
 
             // Create folder if doesn't exist 
             System.IO.Directory.CreateDirectory(path);
@@ -126,6 +127,7 @@ namespace AllSkills
                                   $"shadowDash: {_hasShadowDash.ToString().ToLower()}," +
                                   $"superDash: {_hasSuperDash.ToString().ToLower()}," +
                                   $"wallJump: {_hasWalljump.ToString().ToLower()}," +
+                                  $"lastUpdateTime: '{timeString}'" +
                                   $"}};" +
                                   $"parent.postMessage(data, \"*\");" +
                                   $"</script></body></html>";
