@@ -6,7 +6,7 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 			height: 60px;
-			opacity: .3;	/* Disabled skill opacity */
+			opacity: .3; /* Disabled skill opacity */
 			position: absolute;
 			top: 74px;
 			width: 60px;
@@ -18,7 +18,7 @@
 
 		#focus {
 			background-image: url(./Focus_inventory.png);
-			display: none;	/* Remove to show */
+			display: none; /* Remove to show */
 			left: 0px;
 			top: 0px;
 		}
@@ -104,40 +104,57 @@
 			left: 1380px;
 			top: 78px;
 		}
-		
+
 		#dreamNail {
 			background-image: url(./Dream_Nail.png);
 			height: 80px;
-			left: 858px;
-			top: 68px;
+			left: 856px;
+			top: 66px;
 			width: 80px;
 		}
-		
+
 		#dreamNail[data-value="2"] {
 			background-image: url(./Awoken_Dream_Nail_Icon.png);
+		}
+
+		#completed {
+			background: url(./AllSkills.png) center no-repeat;
+			display: none;
+			height: 50px;
+			left: 970px;
+			position: absolute;
+			top: 140px;
+			width: 190px;
+		}
+
+		#completed.show {
+			display: block;
 		}
 
 	</style>
 </head>
 <body>
 
-<div class="skills">
-	<div id="focus" class="skill"></div>
-	<div id="dash" class="skill"></div>
-	<div id="wallJump" class="skill"></div>
-	<div id="superDash" class="skill"></div>
-	<div id="acidArmour" class="skill"></div>
-	<div id="doubleJump" class="skill"></div>
-	<div id="fireball" class="skill"></div>
-	<div id="quake" class="skill"></div>
-	<div id="scream" class="skill"></div>
-	<div id="dreamNail" class="skill"></div>
-	<div id="cyclone" class="skill"></div>
-	<div id="dashSlash" class="skill"></div>
-	<div id="greatSlash" class="skill"></div>
+<div className="skills">
+	<div id="focus" className="skill"></div>
+	<div id="dash" className="skill"></div>
+	<div id="wallJump" className="skill"></div>
+	<div id="superDash" className="skill"></div>
+	<div id="acidArmour" className="skill"></div>
+	<div id="doubleJump" className="skill"></div>
+	<div id="fireball" className="skill"></div>
+	<div id="quake" className="skill"></div>
+	<div id="scream" className="skill"></div>
+	<div id="dreamNail" className="skill"></div>
+	<div id="cyclone" className="skill"></div>
+	<div id="dashSlash" className="skill"></div>
+	<div id="greatSlash" className="skill"></div>
+	<div id="completed"></div>
 </div>
 
-<iframe id="iframeData" src="data.html" style="display:none"></iframe>
+<div>
+	<iframe id="iframeData" src="data.html" style="display:none"></iframe>
+</div>
 
 <script>
 	const skills = {
@@ -155,8 +172,18 @@
 		wallJump: document.querySelector('#wallJump'),
 	};
 
+	let lastUpdateTime;
+
 	window.addEventListener('message', (event) => {
 		const data = event.data;
+
+		if (lastUpdateTime === data.lastUpdateTime) {
+			return;
+		}
+
+		lastUpdateTime = data.lastUpdateTime;
+
+		let completed = true;
 
 		Object.entries(data).map(([key, value]) => {
 			const skillElement = skills[key];
@@ -166,19 +193,29 @@
 
 				if (value) {
 					skillElement.classList.add('active');
-				}
-				else {
+
+					if (typeof value === 'number' && value < 2) {
+						completed = false;
+					}
+				} else {
 					skillElement.classList.remove('active');
+					completed = false;
 				}
 			}
 		});
+
+		if (completed) {
+			document.querySelector('#completed').classList.add('show');
+		} else {
+			document.querySelector('#completed').classList.remove('show');
+		}
 	});
 
 	const iframe = document.querySelector('#iframeData');
 
 	const interval = setInterval(() => {
 		iframe.src = iframe.src;
-	}, 500);
+	}, 1000);
 
 </script>
 </body>
