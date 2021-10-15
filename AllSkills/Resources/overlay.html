@@ -194,7 +194,7 @@
 				if (value) {
 					skillElement.classList.add('active');
 
-					if (typeof value === 'number' && value < 2) {
+					if (typeof value === 'number' && value < 2 && key !== 'dreamNailLevel') {
 						completed = false;
 					}
 				} else {
