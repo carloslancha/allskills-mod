@@ -7,7 +7,7 @@ namespace AllSkills
 {
     public class AllSkills : Mod 
     {
-        private const string version = "1.1.2";
+        private const string version = "1.2.0";
         
         private int _dashLevel;
         private int _dreamNailLevel;
@@ -113,20 +113,21 @@ namespace AllSkills
                 {
                     string html = $"<html><body><script>" +
                                   $"const data = {{" +
-                                  $"acidArmour: {_hasAcidArmour.ToString().ToLower()}," +
-                                  $"cyclone: {_hasCyclone.ToString().ToLower()}," +
-                                  $"dash: {_hasDash.ToString().ToLower()}," +
-                                  $"dashLevel: {_dashLevel}," +
-                                  $"dreamNailLevel: {_dreamNailLevel}," +
-                                  $"dashSlash: {_hasDashSlash.ToString().ToLower()}," +
-                                  $"doubleJump: {_hasDoubleJump.ToString().ToLower()}," +
-                                  $"fireballLevel: {_fireballLevel.ToString().ToLower()}," +
-                                  $"greatSlash: {_hasUpwardSlash.ToString().ToLower()}," +
-                                  $"quakeLevel: {_quakeLevel.ToString().ToLower()}," +
-                                  $"screamLevel: {_screamLevel.ToString().ToLower()}," +
-                                  $"shadowDash: {_hasShadowDash.ToString().ToLower()}," +
-                                  $"superDash: {_hasSuperDash.ToString().ToLower()}," +
-                                  $"wallJump: {_hasWalljump.ToString().ToLower()}," +
+                                  $"skills: {{" +
+                                      $"acidArmour: {_hasAcidArmour.ToString().ToLower()}," +
+                                      $"cyclone: {_hasCyclone.ToString().ToLower()}," +
+                                      $"dashLevel: {_dashLevel}," +
+                                      $"dreamNailLevel: {_dreamNailLevel}," +
+                                      $"dashSlash: {_hasDashSlash.ToString().ToLower()}," +
+                                      $"doubleJump: {_hasDoubleJump.ToString().ToLower()}," +
+                                      $"fireballLevel: {_fireballLevel.ToString().ToLower()}," +
+                                      $"focus: true," +
+                                      $"greatSlash: {_hasUpwardSlash.ToString().ToLower()}," +
+                                      $"quakeLevel: {_quakeLevel.ToString().ToLower()}," +
+                                      $"screamLevel: {_screamLevel.ToString().ToLower()}," +
+                                      $"superDash: {_hasSuperDash.ToString().ToLower()}," +
+                                      $"wallJump: {_hasWalljump.ToString().ToLower()}," +
+                                  $"}}," +
                                   $"lastUpdateTime: '{timeString}'" +
                                   $"}};" +
                                   $"parent.postMessage(data, \"*\");" +

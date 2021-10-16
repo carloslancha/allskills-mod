@@ -1,0 +1,165 @@
+﻿/* Skills container */
+.skills {
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+}
+
+/* Common skills classes */
+.skill {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60px;
+    opacity: .3; /* Disabled skill opacity */
+    position: absolute;
+    top: 74px;
+    width: 60px;
+}
+
+.skill.hide {
+    display: none;
+}
+
+/* Completed Image */
+#completed {
+    background: url(./images/AllSkills.png) center no-repeat;
+    display: none;
+    height: 50px;
+    left: 970px;
+    position: absolute;
+    top: 140px;
+    width: 190px;
+}
+
+#completed.show {
+    display: block;
+}
+
+/* Active skill class */
+.skill.active {
+    opacity: 1;
+}
+
+/* Skills */
+
+/* Isma's Tear */
+#acidArmour {
+    background-image: url(./images/Ismas_Tear.png);
+    left: 1195px;
+    top: 76px;
+}
+
+/* Cyclone Slash */
+#cyclone {
+    background-image: url(./images/Cyclone_Slash.png);
+    left: 1260px;
+    top: 78px;
+}
+
+/* Mothwing Cloak */
+#dash {
+    background-image: url(./images/Mothwing_Cloak_Icon.png);
+    left: 930px;
+    top: 77px;
+}
+
+/* Shade Cloack */
+#dash[data-value="2"] {
+    background-image: url(./images/Shade_Cloak_Icon.png);
+}
+
+/* Dash Slash */
+#dashSlash {
+    background-image: url(./images/Dash_Slash.png);
+    left: 1320px;
+    top: 78px;
+}
+
+/* Monarch Wings */
+#doubleJump {
+    background-image: url(./images/Monarch_Wings_Icon.png);
+    left: 1132px;
+    top: 75px;
+}
+
+/* Dream Nail */
+#dreamNail {
+    background-image: url(./images/Dream_Nail.png);
+    height: 80px;
+    left: 856px;
+    top: 66px;
+    width: 80px;
+}
+
+/* Awake Dream Nail */
+#dreamNail[data-value="2"] {
+    background-image: url(./images/Awoken_Dream_Nail_Icon.png);
+}
+
+/* Vengeful Spirit */
+#fireball {
+    background-image: url(./images/Vengeful_Spirit_Icon.png);
+    left: 680px;
+    top: 74px;
+}
+
+/* Shade Soul */
+#fireball[data-value="2"] {
+    background-image: url(./images/Shade_Soul_Icon.png);
+}
+
+/* Focus */
+#focus {
+    background-image: url(./images/Focus_inventory.png);
+    display: none; /* Remove to show */
+    left: 0px;
+    top: 0px;
+}
+
+/* Great Slash */
+#greatSlash {
+    background-image: url(./images/Great_Slash.png);
+    left: 1380px;
+    top: 78px;
+}
+
+/* Crystal Heart */
+#superDash {
+    background-image: url(./images/Crystal_Heart_Icon.png);
+    left: 1060px;
+    top: 75px;
+}
+
+/* Desolate Dive */
+#quake {
+    background-image: url(./images/Desolate_Dive_Icon.png);
+    left: 750px;
+    width: 50px;
+}
+
+/* Descending Dark */
+#quake[data-value="2"] {
+    background-image: url(./images/Descending_Dark_Icon.png);
+}
+
+/* Howling Wraiths */
+#scream {
+    background-image: url(./images/Howling_Wraiths_Icon.png);
+    left: 805px;
+    top: 75px;
+}
+
+/* Abyss Shriek */
+#scream[data-value="2"] {
+    background-image: url(./images/Abyss_Shriek_Icon.png);
+}
+
+/* Mantis Claw */
+#wallJump {
+    background-image: url(./images/Mantis_Claw.png);
+    left: 990px;
+    top: 76px;
+}

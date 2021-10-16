@@ -46,7 +46,27 @@
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="Resources\images\Abyss_Shriek_Icon.png" />
+      <Content Include="Resources\images\AllSkills.png" />
+      <Content Include="Resources\images\Awoken_Dream_Nail_Icon.png" />
+      <Content Include="Resources\images\Crystal_Heart_Icon.png" />
+      <Content Include="Resources\images\Cyclone_Slash.png" />
+      <Content Include="Resources\images\Dash_Slash.png" />
+      <Content Include="Resources\images\Descending_Dark_Icon.png" />
+      <Content Include="Resources\images\Desolate_Dive_Icon.png" />
+      <Content Include="Resources\images\Dream_Nail.png" />
+      <Content Include="Resources\images\Focus_inventory.png" />
+      <Content Include="Resources\images\Great_Slash.png" />
+      <Content Include="Resources\images\Howling_Wraiths_Icon.png" />
+      <Content Include="Resources\images\Ismas_Tear.png" />
+      <Content Include="Resources\images\Mantis_Claw.png" />
+      <Content Include="Resources\images\Monarch_Wings_Icon.png" />
+      <Content Include="Resources\images\Mothwing_Cloak_Icon.png" />
+      <Content Include="Resources\images\Shade_Cloak_Icon.png" />
+      <Content Include="Resources\images\Shade_Soul_Icon.png" />
+      <Content Include="Resources\images\Vengeful_Spirit_Icon.png" />
       <Content Include="Resources\overlay.html" />
+      <Content Include="Resources\styles.css" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,155 +1,84 @@
 <html>
 <head>
-	<style>
-		.skill {
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			height: 60px;
-			opacity: .3; /* Disabled skill opacity */
-			position: absolute;
-			top: 74px;
-			width: 60px;
-		}
+	<script>
+		const config = {
+			showCompleted: true,
+			skills: {
+				acidArmour: {
+					required: true,
+					show: true,
+				},
+				cyclone: {
+					required: true,
+					show: true,
+				},
+				dashLevel: {
+					requiredLevel: 2,
+					show: true,
+				},
+				dashSlash: {
+					required: true,
+					show: true,
+				},
+				doubleJump: {
+					required: true,
+					show: true,
+				},
+				dreamNailLevel: {
+					requiredLevel: 1,
+					show: true,
+				},
+				fireballLevel: {
+					requiredLevel: 2,
+					show: true,
+				},
+				focus: {
+					required: true,
+					show: false,
+				},
+				greatSlash: {
+					required: true,
+					show: true,
+				},
+				quakeLevel: {
+					requiredLevel: 2,
+					show: true,
+				},
+				screamLevel: {
+					requiredLevel: 2,
+					show: true,
+				},
+				superDash: {
+					required: true,
+					show: true,
+				},
+				wallJump: {
+					required: true,
+					show: true,
+				}
+			}
+		};
+	</script>
 
-		.skill.active {
-			opacity: 1;
-		}
-
-		#focus {
-			background-image: url(./Focus_inventory.png);
-			display: none; /* Remove to show */
-			left: 0px;
-			top: 0px;
-		}
-
-		#dash {
-			background-image: url(./Mothwing_Cloak_Icon.png);
-			left: 930px;
-			top: 77px;
-		}
-
-		#dash[data-value="2"] {
-			background-image: url(./Shade_Cloak_Icon.png);
-		}
-
-		#wallJump {
-			background-image: url(./Mantis_Claw.png);
-			left: 990px;
-			top: 76px;
-		}
-
-		#superDash {
-			background-image: url(./Crystal_Heart_Icon.png);
-			left: 1060px;
-			top: 75px;
-		}
-
-		#acidArmour {
-			background-image: url(./Ismas_Tear.png);
-			left: 1195px;
-			top: 76px;
-		}
-
-		#doubleJump {
-			background-image: url(./Monarch_Wings_Icon.png);
-			left: 1132px;
-			top: 75px;
-		}
-
-		#fireball {
-			background-image: url(./Vengeful_Spirit_Icon.png);
-			left: 680px;
-			top: 74px;
-		}
-
-		#fireball[data-value="2"] {
-			background-image: url(./Shade_Soul_Icon.png);
-		}
-
-		#quake {
-			background-image: url(./Desolate_Dive_Icon.png);
-			left: 750px;
-			width: 50px;
-		}
-
-		#quake[data-value="2"] {
-			background-image: url(./Descending_Dark_Icon.png);
-		}
-
-		#scream {
-			background-image: url(./Howling_Wraiths_Icon.png);
-			left: 805px;
-			top: 75px;
-		}
-
-		#scream[data-value="2"] {
-			background-image: url(./Abyss_Shriek_Icon.png);
-		}
-
-		#cyclone {
-			background-image: url(./Cyclone_Slash.png);
-			left: 1260px;
-			top: 78px;
-		}
-
-		#dashSlash {
-			background-image: url(./Dash_Slash.png);
-			left: 1320px;
-			top: 78px;
-		}
-
-		#greatSlash {
-			background-image: url(./Great_Slash.png);
-			left: 1380px;
-			top: 78px;
-		}
-
-		#dreamNail {
-			background-image: url(./Dream_Nail.png);
-			height: 80px;
-			left: 856px;
-			top: 66px;
-			width: 80px;
-		}
-
-		#dreamNail[data-value="2"] {
-			background-image: url(./Awoken_Dream_Nail_Icon.png);
-		}
-
-		#completed {
-			background: url(./AllSkills.png) center no-repeat;
-			display: none;
-			height: 50px;
-			left: 970px;
-			position: absolute;
-			top: 140px;
-			width: 190px;
-		}
-
-		#completed.show {
-			display: block;
-		}
-
-	</style>
+	<link href="styles.css" rel="stylesheet">
 </head>
 <body>
 
 <div class="skills">
-	<div id="focus" class="skill"></div>
-	<div id="dash" class="skill"></div>
-	<div id="wallJump" class="skill"></div>
-	<div id="superDash" class="skill"></div>
 	<div id="acidArmour" class="skill"></div>
+	<div id="completed"></div>
+	<div id="cyclone" class="skill"></div>
+	<div id="dash" class="skill"></div>
+	<div id="dashSlash" class="skill"></div>
 	<div id="doubleJump" class="skill"></div>
+	<div id="dreamNail" class="skill"></div>
 	<div id="fireball" class="skill"></div>
+	<div id="focus" class="skill"></div>
+	<div id="greatSlash" class="skill"></div>
 	<div id="quake" class="skill"></div>
 	<div id="scream" class="skill"></div>
-	<div id="dreamNail" class="skill"></div>
-	<div id="cyclone" class="skill"></div>
-	<div id="dashSlash" class="skill"></div>
-	<div id="greatSlash" class="skill"></div>
-	<div id="completed"></div>
+	<div id="superDash" class="skill"></div>
+	<div id="wallJump" class="skill"></div>
 </div>
 
 <div>
@@ -157,7 +86,7 @@
 </div>
 
 <script>
-	const skills = {
+	const elements = {
 		acidArmour: document.querySelector('#acidArmour'),
 		cyclone: document.querySelector('#cyclone'),
 		dashLevel: document.querySelector('#dash'),
@@ -182,29 +111,40 @@
 		}
 
 		lastUpdateTime = data.lastUpdateTime;
-
+		
 		let completed = true;
-
-		Object.entries(data).map(([key, value]) => {
-			const skillElement = skills[key];
-
+		
+		Object.entries(data.skills).map(([key, value]) => {
+			const skillElement = elements[key];
+			
 			if (skillElement && skillElement.dataset.value !== value.toString()) {
 				skillElement.dataset.value = value;
-
+				
 				if (value) {
 					skillElement.classList.add('active');
-
-					if (typeof value === 'number' && value < 2 && key !== 'dreamNailLevel') {
-						completed = false;
-					}
-				} else {
+				}
+				else {
 					skillElement.classList.remove('active');
-					completed = false;
+				}
+				
+				if (config.skills[key].show) {
+					skillElement.classList.remove('hide');
+				}
+				else {
+					skillElement.classList.add('hide');
+				}
+			}
+
+			if (completed) {
+				if (typeof value === 'number') {
+					completed = completed && value >= config.skills[key].requiredLevel;
+				} else {
+					completed = completed && value === config.skills[key].required;
 				}
 			}
 		});
 
-		if (completed) {
+		if (config.showCompleted && completed) {
 			document.querySelector('#completed').classList.add('show');
 		} else {
 			document.querySelector('#completed').classList.remove('show');
