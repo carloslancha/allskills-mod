@@ -76,12 +76,12 @@ namespace AllSkills
                 _hasAcidArmour = pd.hasAcidArmour;
                 _hasCyclone = pd.hasCyclone;
                 _hasDash = pd.hasDash;
-                _hasDashSlash = pd.hasDashSlash;
+                _hasDashSlash = pd.hasUpwardSlash;
                 _hasDreamNail = pd.hasDreamNail;
                 _hasDoubleJump = pd.hasDoubleJump;
                 _hasShadowDash = pd.hasShadowDash;
                 _hasSuperDash = pd.hasSuperDash;
-                _hasUpwardSlash = pd.hasUpwardSlash;
+                _hasUpwardSlash = pd.hasDashSlash;
                 _hasWalljump = pd.hasWalljump;
                 _quakeLevel = pd.quakeLevel;
                 _screamLevel = pd.screamLevel;
