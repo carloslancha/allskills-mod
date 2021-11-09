@@ -7,30 +7,30 @@ namespace AllSkills
 {
     public class AllSkills : Mod 
     {
-        private const string version = "1.2.0";
+        private const string version = "1.2.2";
         
-        private int _dashLevel;
-        private int _dreamNailLevel;
-        private bool _dreamNailUpgraded;
-        private int _fireballLevel;
-        private bool _hasAcidArmour;
-        private bool _hasCyclone;
-        private bool _hasDash;
-        private bool _hasDashSlash;
-        private bool _hasDoubleJump;
-        private bool _hasDreamNail;
-        private bool _hasShadowDash;
-        private bool _hasSuperDash;
-        private bool _hasUpwardSlash;
-        private bool _hasWalljump;
-        private int _quakeLevel;
-        private int _screamLevel;
+        private int? _dashLevel = null;
+        private int? _dreamNailLevel = null;
+        private bool? _dreamNailUpgraded = null;
+        private int? _fireballLevel = null;
+        private bool? _hasAcidArmour = null;
+        private bool? _hasCyclone = null;
+        private bool? _hasDash = null;
+        private bool? _hasDashSlash = null;
+        private bool? _hasDoubleJump = null;
+        private bool? _hasDreamNail = null;
+        private bool? _hasShadowDash = null;
+        private bool? _hasSuperDash = null;
+        private bool? _hasUpwardSlash = null;
+        private bool? _hasWalljump = null;
+        private int? _quakeLevel = null;
+        private int? _screamLevel = null;
 
         public override void Initialize()
         {
             ModHooks.Instance.SetPlayerBoolHook += PlayerBoolSet;
         }
-        
+
         public void PlayerBoolSet(string target, bool value)
         {
             PlayerData.instance.SetBoolInternal(target, value);
