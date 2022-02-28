@@ -7,7 +7,7 @@ namespace AllSkills
 {
     public class AllSkills : Mod 
     {
-        private const string version = "1.2.2";
+        private const string version = "1.2.3";
         
         private int? _dashLevel = null;
         private int? _dreamNailLevel = null;
