@@ -1,0 +1,74 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69C03D1B-9A60-496F-86A4-1D9C23EA780F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AllSkills_1.3</RootNamespace>
+    <AssemblyName>AllSkills_1.3</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>latest</LangVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <HollowKnightRefs>G:\Program Files (x86)\Steam\steamapps\common\Hollow Knight\hollow_knight_Data\Managed\</HollowKnightRefs>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>${HollowKnightRefs}\Assembly-CSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\images\Abyss_Shriek_Icon.png" />
+    <Content Include="Resources\images\AllSkills.png" />
+    <Content Include="Resources\images\Awoken_Dream_Nail_Icon.png" />
+    <Content Include="Resources\images\Crystal_Heart_Icon.png" />
+    <Content Include="Resources\images\Cyclone_Slash.png" />
+    <Content Include="Resources\images\Dash_Slash.png" />
+    <Content Include="Resources\images\Descending_Dark_Icon.png" />
+    <Content Include="Resources\images\Desolate_Dive_Icon.png" />
+    <Content Include="Resources\images\Dream_Nail.png" />
+    <Content Include="Resources\images\Focus_inventory.png" />
+    <Content Include="Resources\images\Great_Slash.png" />
+    <Content Include="Resources\images\Howling_Wraiths_Icon.png" />
+    <Content Include="Resources\images\Ismas_Tear.png" />
+    <Content Include="Resources\images\Mantis_Claw.png" />
+    <Content Include="Resources\images\Monarch_Wings_Icon.png" />
+    <Content Include="Resources\images\Mothwing_Cloak_Icon.png" />
+    <Content Include="Resources\images\Shade_Cloak_Icon.png" />
+    <Content Include="Resources\images\Shade_Soul_Icon.png" />
+    <Content Include="Resources\images\Vengeful_Spirit_Icon.png" />
+    <Content Include="Resources\overlay.html" />
+    <Content Include="Resources\styles.css" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>

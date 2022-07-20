@@ -7,7 +7,7 @@ namespace AllSkills
 {
     public class AllSkills : Mod 
     {
-        private const string version = "1.2.3";
+        private const string version = "1.5";
         
         private int? _dashLevel = null;
         private int? _dreamNailLevel = null;
@@ -92,7 +92,7 @@ namespace AllSkills
         
         public void WriteHtmlDataFile()
         {
-            string path = Directory.GetCurrentDirectory() + @"\hollow_knight_Data\Managed\Mods\AllSkills";
+            string path = Directory.GetCurrentDirectory() + @"\hollow_knight_Data\Managed\Mods\AllSkills_1.3";
             string fileName = "data.html";
             string fullPath = path + "\\" + fileName;
             string timeString = DateTime.Now.ToString("hh:mm:ss");
