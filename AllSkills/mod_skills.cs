@@ -1,23 +1,18 @@
-﻿using System.IO;
+﻿using AllSkills;
+using System.IO;
 using System.Text;
 using Modding;
-using AllSkills;
 
 namespace Mod_Skills {
     public class Mod_Skills : Mod {
-        private const string version = "1.5";
         private AllSkills mySkills = new AllSkills();
         public override void Initialize() {
             ModHooks.Instance.SetPlayerBoolHook += PlayerBoolSet;
         }
-
         public void PlayerBoolSet(string target, bool value) {
             PlayerData.instance.SetBoolInternal(target, value);
-            mySkills.UpdateSkillValues();
-
-        }
-        public override string GetVersion() {
-            return version;
+            mySkills.UpdateSkillValues(Playerdata.instance);
+            WriteHtmlDataFile();
         }        
         public void WriteHtmlDataFile() {
             string path = Directory.GetCurrentDirectory() + @"\hollow_knight_Data\Managed\Mods\AllSkills_1.3";
@@ -46,5 +41,6 @@ namespace Mod_Skills {
                 Log(Ex.ToString());    
             }
         }
+        public override string GetVersion() => Assembly.GetExecutingAssembly().GetName().Version.ToString();
     }
 }

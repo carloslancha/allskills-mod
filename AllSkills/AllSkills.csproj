@@ -6,16 +6,15 @@
     <ProjectGuid>{69C03D1B-9A60-496F-86A4-1D9C23EA780F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AllSkills_1.3</RootNamespace>
-    <AssemblyName>AllSkills_1.3</AssemblyName>
+    <RootNamespace>AllSkills</RootNamespace>
+    <AssemblyName>AllSkills</AssemblyName>
+    <AssemblyVersion>1.5.1.0</AssemblyVersion>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <!-- <FileAlignment>512</FileAlignment> -->
     <LangVersion>latest</LangVersion>
-    <TargetFrameworkProfile />
-
-    
-    <HollowKnightRefs>G:\Program Files (x86)\Steam\steamapps\common\Hollow Knight\hollow_knight_Data\Managed\</HollowKnightRefs>
+    <!-- <TargetFrameworkProfile /> -->
   </PropertyGroup>
+  
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -27,6 +26,7 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
@@ -37,11 +37,13 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>${HollowKnightRefs}\Assembly-CSharp.dll</HintPath>
+      <HintPath>G:\Program Files (x86)\Steam\steamapps\common\Hollow Knight\hollow_knight_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
+
   <ItemGroup>
     <Content Include="Resources\images\Abyss_Shriek_Icon.png" />
     <Content Include="Resources\images\AllSkills.png" />
@@ -66,11 +68,4 @@
     <Content Include="Resources\styles.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-         Other similar extension points exist, see Microsoft.Common.targets.
-    <Target Name="BeforeBuild">
-    </Target>
-    <Target Name="AfterBuild">
-    </Target>
-    -->
 </Project>
