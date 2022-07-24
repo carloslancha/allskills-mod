@@ -11,8 +11,10 @@
         <AssemblyName>AllSkills</AssemblyName>
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
-        <LangVersion>default</LangVersion>
+
+        <HollowKnightDir><!--  Your base path to Steam  --></HollowKnightDir>
     </PropertyGroup>
+
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
         <DebugSymbols>true</DebugSymbols>
@@ -32,37 +34,38 @@
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
+    
     <ItemGroup>
-        <Compile Include="Skills.cs" />
-        <Compile Include="AllSkills.cs" />
+      	<Content Include="Resources\images\Abyss_Shriek_Icon.png" />
+      	<Content Include="Resources\images\AllSkills.png" />
+      	<Content Include="Resources\images\Awoken_Dream_Nail_Icon.png" />
+      	<Content Include="Resources\images\Crystal_Heart_Icon.png" />
+      	<Content Include="Resources\images\Cyclone_Slash.png" />
+      	<Content Include="Resources\images\Dash_Slash.png" />
+      	<Content Include="Resources\images\Descending_Dark_Icon.png" />
+      	<Content Include="Resources\images\Desolate_Dive_Icon.png" />
+      	<Content Include="Resources\images\Dream_Nail.png" />
+      	<Content Include="Resources\images\Focus_inventory.png" />
+      	<Content Include="Resources\images\Great_Slash.png" />
+      	<Content Include="Resources\images\Howling_Wraiths_Icon.png" />
+      	<Content Include="Resources\images\Ismas_Tear.png" />
+      	<Content Include="Resources\images\Mantis_Claw.png" />
+      	<Content Include="Resources\images\Monarch_Wings_Icon.png" />
+      	<Content Include="Resources\images\Mothwing_Cloak_Icon.png" />
+      	<Content Include="Resources\images\Shade_Cloak_Icon.png" />
+      	<Content Include="Resources\images\Shade_Soul_Icon.png" />
+      	<Content Include="Resources\images\Vengeful_Spirit_Icon.png" />
+      	<Content Include="Resources\overlay.html" />
+      	<Content Include="Resources\styles.css" />
     </ItemGroup>
     <ItemGroup>
-      <Content Include="Resources\images\Abyss_Shriek_Icon.png" />
-      <Content Include="Resources\images\AllSkills.png" />
-      <Content Include="Resources\images\Awoken_Dream_Nail_Icon.png" />
-      <Content Include="Resources\images\Crystal_Heart_Icon.png" />
-      <Content Include="Resources\images\Cyclone_Slash.png" />
-      <Content Include="Resources\images\Dash_Slash.png" />
-      <Content Include="Resources\images\Descending_Dark_Icon.png" />
-      <Content Include="Resources\images\Desolate_Dive_Icon.png" />
-      <Content Include="Resources\images\Dream_Nail.png" />
-      <Content Include="Resources\images\Focus_inventory.png" />
-      <Content Include="Resources\images\Great_Slash.png" />
-      <Content Include="Resources\images\Howling_Wraiths_Icon.png" />
-      <Content Include="Resources\images\Ismas_Tear.png" />
-      <Content Include="Resources\images\Mantis_Claw.png" />
-      <Content Include="Resources\images\Monarch_Wings_Icon.png" />
-      <Content Include="Resources\images\Mothwing_Cloak_Icon.png" />
-      <Content Include="Resources\images\Shade_Cloak_Icon.png" />
-      <Content Include="Resources\images\Shade_Soul_Icon.png" />
-      <Content Include="Resources\images\Vengeful_Spirit_Icon.png" />
-      <Content Include="Resources\overlay.html" />
-      <Content Include="Resources\styles.css" />
+      	<Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        	<HintPath>$(HollowKnightDir)\Steam\steamapps\common\Hollow Knight\hollow_knight_Data\Managed\Assembly-CSharp.dll</HintPath>
+      	</Reference>
     </ItemGroup>
     <ItemGroup>
-      <Reference Include="Assembly-CSharp">
-        <HintPath>G:\Program Files (x86)\Steam\steamapps\common\Hollow Knight\hollow_knight_Data\Managed\Assembly-CSharp.dll</HintPath>
-      </Reference>
+      	<Compile Include="AllSkills.cs" />
+      	<Compile Include="Skills.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

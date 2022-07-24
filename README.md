@@ -74,6 +74,9 @@ Unzip the [last release](https://github.com/carloslancha/allskills-mod/releases/
 
 ![image](https://user-images.githubusercontent.com/5803434/137046521-501b043d-5d67-4077-b2bb-87583ce47836.png)
 
+## For Devs
+-	[Documentation for developers](./DEV.md)
+
 ## License
 
 GNU GPLv3 License © Carlos Lancha.<br/>
