@@ -12,7 +12,7 @@
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
 
-        <HollowKnightDir><!--  Your base path to Steam  --></HollowKnightDir>
+        <HollowKnightDir><!--  Your base path to Hollow Knight  --></HollowKnightDir>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -60,13 +60,14 @@
     </ItemGroup>
     <ItemGroup>
       	<Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-        	<HintPath>$(HollowKnightDir)\Steam\steamapps\common\Hollow Knight\hollow_knight_Data\Managed\Assembly-CSharp.dll</HintPath>
+        	<HintPath>$(HollowKnightDir)\Hollow Knight\hollow_knight_Data\Managed\Assembly-CSharp.dll</HintPath>
       	</Reference>
     </ItemGroup>
     <ItemGroup>
       	<Compile Include="AllSkills.cs" />
       	<Compile Include="Skills.cs" />
     </ItemGroup>
+    
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.

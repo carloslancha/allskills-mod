@@ -1,3 +1,6 @@
+### [BACK](../README.md)
+<br>
+
 # Developers Documentation
 
 ## Requirements to work with mod
@@ -6,12 +9,16 @@
     
 ```
     <!-- In Example -->
-    <HollowKnightDir>G:\Program Files (x86)</HollowKnightDir>
+    <HollowKnightDir>G:\Program Files (x86)\Steam\steamapps\common</HollowKnightDir>
 ```
 
+## Skills API
+- [About Skills API](../SkillsAPI.md)
+
 ## For Debbuging
-    I strongly recommend to use the ModdingAPI console or enable the log.
-    This will allow you to debug for mod.
+    How to make Console visible in Hollow Knight?
+    Press F10 and TADA!!!!
+    Now, you're ready to debug your mod!
 
 ## Documentation for working
 -   [HK Modding API](https://hk-modding.github.io/api/api/index.html)
