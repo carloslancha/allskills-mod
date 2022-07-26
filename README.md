@@ -40,4 +40,4 @@ Unzip the [last release](https://github.com/carloslancha/allskills-mod/releases/
 ## License
 
 GNU GPLv3 License © Carlos Lancha.<br/>
-www.twitch.tv/empaventuras
+[Twitch/Empaventuras](https://www.twitch.tv/empaventuras)
