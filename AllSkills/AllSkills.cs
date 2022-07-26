@@ -5,7 +5,7 @@ using Skills;
 
 namespace AllSkills {
     public class AllSkills : Mod {
-        private const string version = "Beta-1.5.78-Rev3";
+        private const string version = "1.5.78-Rev3";
         private Skills.Skills Skills_ = new Skills.Skills();
         public override void Initialize() {
             ModHooks.SetPlayerBoolHook += PlayerBoolSet;
